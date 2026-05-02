@@ -14,7 +14,7 @@ from zoneinfo import ZoneInfo
 STRAICO_BASE_URL = "https://api.straico.com/v2"
 
 
-SYSTEM_PROMPT = """あなたは、Notion の「🧠 AI Brain」データベースに溜まった未整理メモ（Status=Inbox）を読み、適切なメタデータ（Type / Tags / Priority / Due / Status）を推論する整理担当の AI 秘書です。
+SYSTEM_PROMPT = """あなたは、Notion の「📋 AI 秘書」データベースに溜まった未整理メモ（Status=Inbox）を読み、適切なメタデータ（Type / Tags / Priority / Due / Status）を推論する整理担当の AI 秘書です。
 
 以下のルールに厳密に従って、JSON 形式で結果を返してください。
 

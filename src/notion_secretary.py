@@ -1,14 +1,14 @@
 """
 Notion API クライアント
-🧠 AI Brain データベースの読み書きを担当
+📋 AI 秘書 データベースの読み書きを担当
 """
 import os
 from typing import Any
 from notion_client import Client
 
 
-class NotionAIBrainClient:
-    """🧠 AI Brain データベース専用クライアント"""
+class NotionSecretaryClient:
+    """📋 AI 秘書 データベース専用クライアント"""
 
     def __init__(self, api_key: str, database_id: str):
         self.client = Client(auth=api_key)

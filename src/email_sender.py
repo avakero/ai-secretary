@@ -23,7 +23,7 @@ class EmailSender:
         recipients: list[str],
         subject: str,
         html_body: str,
-        from_name: str = "🧠 AI Brain Organizer",
+        from_name: str = "📋 AI 秘書",
     ) -> bool:
         """HTML メール送信"""
         msg = MIMEMultipart("alternative")

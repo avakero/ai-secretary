@@ -1,5 +1,5 @@
 """
-🧠 AI Brain Organizer - メインエントリポイント
+📋 AI 秘書 - メインエントリポイント
 
 GitHub Actions から daily-organize.yml で呼び出される。
 処理フロー:
@@ -14,7 +14,7 @@ import traceback
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from notion_brain import NotionAIBrainClient
+from notion_secretary import NotionSecretaryClient
 from ai_organizer import AIOrganizer
 from email_sender import EmailSender
 from html_template import build_html_email, build_empty_email, format_date_jp
@@ -34,7 +34,7 @@ def get_env(name: str, required: bool = True, default: str = "") -> str:
 
 def main() -> None:
     print("=" * 60)
-    print("🧠 AI Brain Organizer - 開始")
+    print("📋 AI 秘書 - 開始")
     print("=" * 60)
 
     # 環境変数の取得
@@ -57,7 +57,7 @@ def main() -> None:
     print()
 
     # クライアント初期化
-    notion = NotionAIBrainClient(notion_api_key, notion_database_id)
+    notion = NotionSecretaryClient(notion_api_key, notion_database_id)
     organizer = AIOrganizer(straico_api_key, model=straico_model)
     sender = EmailSender(gmail_user, gmail_app_password)
 
@@ -75,7 +75,7 @@ def main() -> None:
     if not inbox_pages:
         print("\nInbox は空です。空メールを送信します。")
         html = build_empty_email(today, notion_db_url)
-        subject = f"🧠 AI Brain 朝の整理レポート — {date_str}"
+        subject = f"📋 AI 秘書 朝の整理レポート — {date_str}"
         try:
             sender.send_html(recipients, subject, html)
             print("✅ メール送信完了")
@@ -102,10 +102,10 @@ def main() -> None:
     failed_count = 0
 
     for idx, page in enumerate(inbox_pages, 1):
-        page_id = NotionAIBrainClient.get_page_id(page)
-        title = NotionAIBrainClient.get_page_title(page)
-        url = NotionAIBrainClient.get_page_url(page)
-        created_time = NotionAIBrainClient.get_created_time(page)
+        page_id = NotionSecretaryClient.get_page_id(page)
+        title = NotionSecretaryClient.get_page_title(page)
+        url = NotionSecretaryClient.get_page_url(page)
+        created_time = NotionSecretaryClient.get_created_time(page)
 
         print(f"\n[{idx}/{len(inbox_pages)}] {title}")
 
@@ -184,7 +184,7 @@ def main() -> None:
         notion_db_url=notion_db_url,
         failed_count=failed_count,
     )
-    subject = f"🧠 AI Brain 朝の整理レポート — {date_str}"
+    subject = f"📋 AI 秘書 朝の整理レポート — {date_str}"
 
     try:
         sender.send_html(recipients, subject, html)

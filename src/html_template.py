@@ -182,8 +182,8 @@ def build_html_email(
 <body>
 <div class="wrapper">
   <div class="header">
-    <div class="header-icon">🧠</div>
-    <h1 class="header-title">AI Brain 朝の整理レポート</h1>
+    <div class="header-icon">📋</div>
+    <h1 class="header-title">AI 秘書 朝の整理レポート</h1>
     <p class="header-subtitle">昨日のあなたの思考を整え、今日のあなたへ届けます</p>
     <span class="header-date">📅 {date_str}</span>
   </div>
@@ -206,7 +206,7 @@ def build_html_email(
   </div>
 
   <div class="footer">
-    <div class="footer-title">🧠 AI Brain</div>
+    <div class="footer-title">📋 AI 秘書</div>
     <div class="footer-text">
       昨日の自分から、今日の自分へのバトン。<br>
       未整理アイテムは Notion で確認・修正してください。
@@ -237,7 +237,7 @@ def build_empty_email(today: datetime, notion_db_url: str) -> str:
   <div class="icon">✨</div>
   <div class="title">整理対象なし</div>
   <div class="date">{date_str}</div>
-  <div class="message">AI Brain の Inbox は空っぽです。<br>気持ちのいい朝ですね。</div>
-  <a href="{notion_db_url}" class="link">AI Brain を開く →</a>
+  <div class="message">AI 秘書 の Inbox は空っぽです。<br>気持ちのいい朝ですね。</div>
+  <a href="{notion_db_url}" class="link">AI 秘書 を開く →</a>
 </div></body></html>
 """

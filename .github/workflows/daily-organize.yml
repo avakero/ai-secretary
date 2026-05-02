@@ -1,4 +1,4 @@
-name: 🧠 AI Brain Daily Organize
+name: 📋 AI 秘書 Daily Organize
 
 on:
   schedule:
@@ -26,7 +26,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run AI Brain Organizer
+      - name: Run AI 秘書 Organizer
         env:
           STRAICO_API_KEY: ${{ secrets.STRAICO_API_KEY }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
