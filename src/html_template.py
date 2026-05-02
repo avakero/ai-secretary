@@ -143,20 +143,20 @@ def build_html_email(
 <head><meta charset="UTF-8">
 <style>
   body {{ margin: 0; padding: 0; background-color: #0a0a14; font-family: 'Helvetica Neue', Arial, sans-serif; }}
-  .wrapper {{ max-width: 720px; margin: 0 auto; background: #ffffff; }}
-  .header {{ background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); padding: 48px 32px; text-align: center; position: relative; overflow: hidden; }}
-  .header-icon {{ font-size: 56px; margin-bottom: 12px; position: relative; }}
-  .header-title {{ color: #fff; font-size: 28px; font-weight: 800; margin: 0 0 8px; letter-spacing: -0.5px; position: relative; }}
-  .header-subtitle {{ color: rgba(255,255,255,0.85); font-size: 14px; margin: 0; position: relative; }}
-  .header-date {{ display: inline-block; margin-top: 18px; background: rgba(255,255,255,0.18); color: #fff; font-size: 13px; padding: 8px 18px; border-radius: 24px; position: relative; }}
+  .wrapper {{ max-width: 920px; margin: 0 auto; background: #ffffff; }}
+  .header {{ background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); padding: 56px 20px; text-align: center; position: relative; overflow: hidden; }}
+  .header-icon {{ font-size: 64px; margin-bottom: 14px; position: relative; }}
+  .header-title {{ color: #fff; font-size: 38px; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.5px; position: relative; line-height: 1.3; }}
+  .header-subtitle {{ color: rgba(255,255,255,0.85); font-size: 16px; margin: 0; position: relative; }}
+  .header-date {{ display: inline-block; margin-top: 20px; background: rgba(255,255,255,0.18); color: #fff; font-size: 14px; padding: 10px 22px; border-radius: 24px; position: relative; }}
   .stats {{ display: flex; padding: 0; background: #f8fafc; border-bottom: 1px solid #e2e8f0; }}
-  .stat {{ flex: 1; padding: 24px 16px; text-align: center; border-right: 1px solid #e2e8f0; }}
+  .stat {{ flex: 1; padding: 28px 12px; text-align: center; border-right: 1px solid #e2e8f0; }}
   .stat:last-child {{ border-right: none; }}
-  .stat-num {{ font-size: 32px; font-weight: 800; color: #6366f1; }}
-  .stat-label {{ font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: #64748b; text-transform: uppercase; margin-top: 4px; }}
-  .content {{ padding: 36px 32px; }}
-  .section-label {{ font-size: 11px; font-weight: 800; letter-spacing: 2px; color: #6366f1; text-transform: uppercase; margin-bottom: 20px; padding-left: 12px; border-left: 3px solid #6366f1; }}
-  .item {{ border: 1px solid #e2e8f0; border-radius: 14px; padding: 22px 24px; margin-bottom: 16px; position: relative; overflow: hidden; }}
+  .stat-num {{ font-size: 36px; font-weight: 800; color: #6366f1; }}
+  .stat-label {{ font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #64748b; text-transform: uppercase; margin-top: 6px; }}
+  .content {{ padding: 40px 20px; }}
+  .section-label {{ font-size: 20px; font-weight: 800; letter-spacing: 0.5px; color: #6366f1; margin-bottom: 24px; padding-left: 14px; border-left: 4px solid #6366f1; }}
+  .item {{ border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px 26px; margin-bottom: 18px; position: relative; overflow: hidden; }}
   .item::before {{ content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899); }}
   .item-header {{ margin-bottom: 10px; }}
   .badge {{ display: inline-block; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; letter-spacing: 0.5px; margin-right: 6px; }}
@@ -166,7 +166,7 @@ def build_html_email(
   .badge-priority-mid {{ background: #fef3c7; color: #d97706; }}
   .badge-priority-low {{ background: #f1f5f9; color: #64748b; }}
   .badge-due {{ background: #dbeafe; color: #2563eb; }}
-  .item-title {{ font-size: 16px; font-weight: 700; color: #0f172a; line-height: 1.4; margin: 8px 0 12px; }}
+  .item-title {{ font-size: 21px; font-weight: 700; color: #0f172a; line-height: 1.45; margin: 10px 0 14px; }}
   .item-tags {{ font-size: 12px; color: #64748b; margin-bottom: 10px; }}
   .item-tag {{ display: inline-block; background: #f1f5f9; padding: 3px 8px; border-radius: 4px; margin-right: 4px; }}
   .item-reason {{ font-size: 12px; color: #92400e; background: #fef3c7; padding: 6px 10px; border-radius: 6px; margin-bottom: 10px; }}
