@@ -143,7 +143,7 @@ def build_html_email(
 <head><meta charset="UTF-8">
 <style>
   body {{ margin: 0; padding: 0; background-color: #0a0a14; font-family: 'Helvetica Neue', Arial, sans-serif; }}
-  .wrapper {{ max-width: 920px; margin: 0 auto; background: #ffffff; }}
+  .wrapper {{ max-width: 1200px; margin: 0 auto; background: #ffffff; }}
   .header {{ background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%); padding: 56px 20px; text-align: center; position: relative; overflow: hidden; }}
   .header-icon {{ font-size: 64px; margin-bottom: 14px; position: relative; }}
   .header-title {{ color: #fff; font-size: 38px; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.5px; position: relative; line-height: 1.3; }}
@@ -154,7 +154,7 @@ def build_html_email(
   .stat:last-child {{ border-right: none; }}
   .stat-num {{ font-size: 36px; font-weight: 800; color: #6366f1; }}
   .stat-label {{ font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #64748b; text-transform: uppercase; margin-top: 6px; }}
-  .content {{ padding: 40px 20px; }}
+  .content {{ padding: 40px 12px; }}
   .section-label {{ font-size: 20px; font-weight: 800; letter-spacing: 0.5px; color: #6366f1; margin-bottom: 24px; padding-left: 14px; border-left: 4px solid #6366f1; }}
   .item {{ border: 1px solid #e2e8f0; border-radius: 14px; padding: 24px 26px; margin-bottom: 18px; position: relative; overflow: hidden; }}
   .item::before {{ content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899); }}
